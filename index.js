@@ -65,7 +65,7 @@ const User = mongoose.model('User', userSchema);
 // Routes
 
 // Home route - "/route"
-app.get('/route', (req, res) => {
+app.get('/', (req, res) => {
   console.log('Home route accessed');
   res.send('Welcome to the /route endpoint!');
 });
