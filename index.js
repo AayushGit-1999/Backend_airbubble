@@ -64,6 +64,12 @@ const User = mongoose.model('User', userSchema);
 
 // Routes
 
+// Home route - "/route"
+app.get('/route', (req, res) => {
+  console.log('Home route accessed');
+  res.send('Welcome to the /route endpoint!');
+});
+
 // Signup
 app.post('/api/users', async (req, res) => {
   try {
