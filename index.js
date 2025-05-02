@@ -26,7 +26,7 @@ if (!admin.apps.length) {
     credential: admin.credential.cert({
       projectId: 'airbubble2-5be80',
       clientEmail: "firebase-adminsdk-fbsvc@airbubble2-5be80.iam.gserviceaccount.com",
-      privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+      privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n') || '',
     }),
   });
 }
